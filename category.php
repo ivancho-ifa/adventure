@@ -1,78 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Category</title>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href="stylecss.css" rel='stylesheet' type='text/css'/>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--js-->
-<script src="js/jquery.min.js"></script>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!--/js-->
-<!--animated-css-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
-<script>
- new WOW().init();
-</script>
-</head>
+		<title>Категория</title>
 
-<body>
-<?php include('connect-to-db.php'); ?>
-<?php include('top.php'); ?>
-<!--/sticky-->
-<?php include('slider.php'); ?>
-<div style="height:50px"></div>
-<div style="width:1000px; margin:auto" >
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-<div style="width:200px; float:left">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="css/stylecss.css" rel='stylesheet' type='text/css'/>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 
-<table cellpadding="0" cellspacing="0" width="1000px">
-<tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Category</b></td></tr>
-<?php
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 
+	<body>
+		<?php include('connect-to-db.php'); ?>
+		<?php include('navigation.php'); ?>
 
-$s="select * from category";
-$result=mysqli_query($cn,$s);
-$r=mysqli_num_rows($result);
-//echo $r;
+		<img src="images/beach3.jpg" width="100%" />
 
-while($data=mysqli_fetch_array($result))
-{
+		<div style="height:50px"></div>
 
-		echo "<tr><td style=' padding:5px;'><b><a href='subcat.php?catid=$data[0]'>$data[1]</a></b></td></tr>";
+		<div style="width:1000px; margin:auto; margin-bottom:300px" >
+			<div style="width:200px; float:left">
+				<table cellpadding="0" cellspacing="0" width="1000px">
+					<tr>
+						<td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F">
+							<b>Категория</b>
+						</td>
+					</tr>
 
-}
-mysqli_close($cn);
-?>
+					<?php
+						$s="select * from category";
+						$result=mysqli_query($cn,$s);
+						$r=mysqli_num_rows($result);
 
-</table>
+						while($data=mysqli_fetch_array($result)) {
+							echo "<tr><td style=' padding:5px;'><b><a href='subcat.php?catid=$data[0]'>$data[1]</a></b></td></tr>";
+						}
 
-</div>
+						mysqli_close($cn);
+					?>
+				</table>
+			</div>
 
-<div style="width:800px; float:left">
-<table cellpadding="0px" cellspacing="0" width="1000px">
-<tr><td class="headingText">Welcome to My Tour</td></tr>
-<tr><td class="paraText" width="900px">Create your dream holiday.
-what you like. Do what you love.
-What's New Explore new experiences, attractions, food and wine trends.
-What will you find during your visit to My Tour?  Exhilarating outdoor adventures including
-hiking, camping or skiing. Incredible whitewater rafting on the Colorado River. Stunning golf courses
-whose green fairways are juxtaposed against the craggy Redland desert. Peaceful places to reflect and
-unwind amidst the natural splendor of Colorado's Western Slope. A charming downtown full of great
-shops, restaurants, art galleries and so much more. This is My Tour, where you can experience
-beautiful tourist places.</td><td style="background-image:url(images/13.jpg); background-repeat:no-repeat; color:#FFF; font-family:Lucida Sans Unicode, Lucida Grande, sans-serif; font-size:24px; " width="700px" height="250px" ><div style="background:linear-gradient(#09F,#096,#09F); vertical-align:text-top; padding-left:5%;  width:100%;">HAVE A GOOD TIME &nbsp;&nbsp;&nbsp; without spending a dime</div	></td></tr></table>
+			<div style="width:800px; float:left">
+				<table cellpadding="0px" cellspacing="0" width="1000px">
+					<tr>
+						<td class="headingText">Добре дошли в Пътешествие!</td>
+					</tr>
 
-</div>
+					<tr>
+						<td class="paraText" width="900px">
+							Създайте мечтаната си почивка!
+							Правете каквото хресвате! Правете каквото обичате!
+							Печете се на слънце, пляскайте се в морето, галерии, кюфтета, кебапчета...
+							Нека Ви помогнем с организацията!
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 
-</div>
-
-<div style="clear:both"></div>
-
-
-</body>
+		<div style="clear:both"></div>
+	</body>
 </html>

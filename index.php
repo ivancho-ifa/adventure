@@ -2,35 +2,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Пътешествие</title>
 
-		<script src="js/jquery.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="css/stylecss.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-
 		<?php include('connect-to-db.php'); ?>
+		<?php include('navigation.php'); ?>
 
-		<?php include('top.php'); ?>
 
 		<img src="images/beach4.jpg" width="100%" />
 
 		<div class="about section" id="section-2">
 			<div class="about-head text-center">
-				<h3>About Us</h3>
+				<h3>За нас</h3>
 				<img src="images/about-img.png">
 			</div>
 			<div class="container">
-				<p>My Tour is a program that prepares individuals to manage travel-related enterprises and related convention and/or tour services. Includes instruction in travel agency management, tour arranging and planning, convention and event planning, travel industry operations and procedures, tourism marketing and promotion strategies, travel counseling, travel industry law, international and domestic operations, and travel and tourism policy.</p>
+				<p>Пътешествие е сайт за резервация на почивки. Базирани сме в София, пътуваме с вас навсякъде по света!</p>
 			</div>
 		</div>
 
 		<div  class="section" id="section-3">
 			<div id="portfolio" class="portfolio">
 				<div class="top-tours-head text-center">
-					<h3>Gallery</h3>
+					<h3>Галерия</h3>
 					<img src="images/star.png">
 				</div>
 
