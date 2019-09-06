@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>View Enquiry</title>
+		<title>Преглед на записи</title>
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
 		<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -31,22 +31,22 @@
 			<div class="col-sm-9">
 				<form method="post">
 					<table border="0" width="90%" height="300px" align="center" class="tableshadow">
-						<tr><td class="toptd">View Enquiry</td></tr>
+						<tr><td class="toptd">Преглед на записите</td></tr>
 
 						<tr>
 							<td align="center" valign="top" style="padding-top:10px;">
 							<table border="0" align="center" width="95%">
 								<tr>
-									<td style="font-size:15px; padding:5px; font-weight:bold;" >Package Name</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold; ">Package Id</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Name</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Gender</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Mobile No.</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Email</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">No. of Days</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">No. of Children</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">no. of Adults</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Status Field</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;" >Име на пакета</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold; ">ID на пакета</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Име</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Пол</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Телефон</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">имейл</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Дни</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Деца</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Възрастни</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Статус</td>
 								</tr>
 
 

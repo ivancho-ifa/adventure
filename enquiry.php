@@ -69,13 +69,13 @@
 										<form method="post" enctype="multipart/form-data">
 											<tr><td colspan="3" class="middletext">ID на пакет:<?php echo $data[0];?></td></tr>
 											<tr><td colspan="3" class="middletext">Име на пакет:<?php echo $data[1];?></td></tr>
-											<tr><td class="lefttxt">Име:</td><td><input type="text" name="t1" required pattern="[а-яА-я1 ]{3,50}" title="Please Enter Only Characters and numbers between 1 to 50 for Name"/></td></tr><br/>
-											<tr><td class="lefttxt">Пол:</td><td><input type="radio" name="r1" value="Male" checked="checked" />Male<input type="radio" name="r1"  value="Female"/>Female</td></tr><br/>
-											<tr><td class="lefttxt">Телефон:</td><td><input type="text" name="t2" required pattern="[0-9]{10,12}" title="Please Enter Only numbers between 10 to 12 for Mobile No"/></td></tr><br/>
+											<tr><td class="lefttxt">Име:</td><td><input type="text" name="t1" required pattern="[а-яА-я1 ]{3,50}" title="Въведете между 3-50 английски букви или интервал"/></td></tr><br/>
+											<tr><td class="lefttxt">Пол:</td><td><input type="radio" name="r1" value="Male" checked="checked" />Мъж<input type="radio" name="r1"  value="Female"/>Жена</td></tr><br/>
+											<tr><td class="lefttxt">Телефон:</td><td><input type="text" name="t2" required pattern="[0-9]{10,12}" title="Въведете между 10-12 цифри"/></td></tr><br/>
 											<tr><td class="lefttxt">Мейл:</td><td><input type="email" name="t3" required /></td><td><br/>
-											<tr><td class="lefttxt">Дни:</td><td><input type="number" name="t4" required pattern="[1 _]{1,20}" title="Please Enter Only numbers between 1 to 20 for No. oF Days"/></td><td><br/>
-											<tr><td class="lefttxt">Деца:</td><td><input type="number" name="t5" required pattern="[1 _]{1,10}" title="Please Enter Only numbers between 1 to 10 for Children"/></td><td><br/>
-											<tr><td class="lefttxt">Възрастни:</td><td><input type="number" name="t6" required pattern="[1 _]{1,20}" title="Please Enter Only numbers between 1 to 20 for No.Of Adults"/></td><td><br/>
+											<tr><td class="lefttxt">Дни:</td><td><input type="number" name="t4" required pattern="[1 _]{1,20}" title="Числа"/></td><td><br/>
+											<tr><td class="lefttxt">Деца:</td><td><input type="number" name="t5" required pattern="[1 _]{1,10}" title="Числа"/></td><td><br/>
+											<tr><td class="lefttxt">Възрастни:</td><td><input type="number" name="t6" required pattern="[1 _]{1,20}" title="Числа"/></td><td><br/>
 											<tr><td class="lefttxt">Съобщение:</td><td><textarea name="t7" required="required"></textarea></td><td><br/>
 											<tr><td>&nbsp;</td><td ><input type="submit" value="Submit" name="sbmt" /></td></tr>
 										</form>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>View Subcategory</title>
+		<title>Преглед на подкатегориите</title>
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
 		<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -46,11 +46,11 @@
 			<div class="col-sm-9">
 				<form method="post">
 					<table border="0" width="400px" height="300px" align="center" class="tableshadow">
-						<tr><td class="toptd">View Subcategory</td></tr>
+						<tr><td class="toptd">Преглед на подкатегориите</td></tr>
 						<tr><td align="center" valign="top" style="padding-top:10px;">
 							<table border="0" align="center" width="70%" >
-								<tr><td style="font-size:15px; padding:5px; font-weight:bold;">Subcategory Id</td>
-								<td style="font-size:15px; padding:5px; font-weight:bold;">Subcategory Name</td></tr>
+								<tr><td style="font-size:15px; padding:5px; font-weight:bold;">ID</td>
+								<td style="font-size:15px; padding:5px; font-weight:bold;">Име на подкатегорията</td></tr>
 
 								<?php
 									$s="select * from subcategory";

@@ -56,12 +56,12 @@
 									<td>User Name</td>
 							</td>
 
-							<td><input type="text" name="t1" required pattern="[a-zA-z _]{1,50}" title"Please Enter Only Characters between 1 to 50 for User Name" /></td>
+							<td><input type="text" name="t1" required pattern="[a-zA-z _]{1,50}" title"Въведете между 1-50 английски букви, интервал или _" /></td>
 						</tr>
 
 						<tr>
-							<td class="lefttxt">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-							<td><input type="password" name="t2" required pattern="[a-zA-z0-9]{1,10}" title"Please Enter Only Characters between 1 to 10 for Password" /></td>
+							<td class="lefttxt">Password</td>
+							<td><input type="password" name="t2" required pattern="[a-zA-z0-9]{1,10}" title"Въведете между 1-10 английски букви или цифри" /></td>
 						</tr>
 								</table>
 

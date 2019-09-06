@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>View Package</title>
+		<title>Преглед на пакетите</title>
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
 		<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -43,18 +43,18 @@
 			<div class="col-sm-9">
 				<form method="post">
 					<table border="0" width="90%" height="300px" align="center" class="tableshadow">
-						<tr><td class="toptd">View Package</td></tr>
+						<tr><td class="toptd">Преглед на пакетите</td></tr>
 						<tr><td align="center" valign="top" style="padding-top:10px;">
 							<table border="0" align="center" width="95%" >
 								<tr>
 									<td style="font-size:15px; padding:5px; font-weight:bold;">ID</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Package Name</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Category</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Subcategory</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Price</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Pic1</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Pic2</td>
-									<td style="font-size:15px; padding:5px; font-weight:bold;">Pic3</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Име на пакета</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Категория</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Подкатегория</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Цена</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Картинка1</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Картинка2</td>
+									<td style="font-size:15px; padding:5px; font-weight:bold;">Картинка3</td>
 								</tr>
 
 								<?php

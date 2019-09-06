@@ -9,12 +9,12 @@
 
 	<body>
 		<table style="width:100%">
-			<tr><td style="font-size:28px">Admin Links</td></tr>
+			<tr><td style="font-size:28px">Админ панел</td></tr>
 
-			<tr><td><a href="viewcategory.php">View Category</a></td></tr>
-			<tr><td><a href="viewsubcategory.php">View Subcategory</a></td></tr>
-			<tr><td><a href="viewpackage.php">View Package</a></td></tr>
-			<tr><td><a href="viewenquiry.php">View Enquiry</a></td></tr>
+			<tr><td><a href="viewcategory.php">Категории</a></td></tr>
+			<tr><td><a href="viewsubcategory.php">Подкатегории</a></td></tr>
+			<tr><td><a href="viewpackage.php">Пакети</a></td></tr>
+			<tr><td><a href="viewenquiry.php">Запитвания</a></td></tr>
 		</table>
 	</body>
 </html>
