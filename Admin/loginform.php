@@ -20,16 +20,15 @@
 			if(isset($_POST["sbmt"]))
 			{
 				$stmt = $cn->prepare("select * from users where Username = ? and Pwd = ?");
-				$stmt->bind_param('s', htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8'));
-				$stmt->bind_param('s', htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8'));
-				
+				$stmt->bind_param('ss', htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8'), htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8'));
+
 				$stmt->execute();
 				$data = $stmt->get_result();
 				$row = $data->fetch_assoc();
-				
+
 				if($row) {
 					$_SESSION["Username"]= $_POST["t1"];
-					$_SESSION["usertype"]=$data[2];
+					$_SESSION["usertype"]=$row[2];
 					$_SESSION['loginstatus']="yes";
 					header("location:index.php");
 				} else {
