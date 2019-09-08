@@ -18,7 +18,7 @@
 		<?php
 			if(isset($_POST["sbmt"]))
 			{
-				$s="insert into enquiry(Packageid,Name,Gender,Mobileno,Email,NoofDays,Child,Adults,Message,Statusfield) values('" . $_REQUEST["pid"] ."','" . $_POST["t1"] ."','" . $_POST["r1"] ."','" . $_POST["t2"] ."','" . $_POST["t3"] ."','" . $_POST["t4"] ."','" . $_POST["t5"] ."','" . $_POST["t6"] ."','" . $_POST["t7"] ."','Pending')";
+				$s="insert into enquiry(Packageid,Name,Gender,Mobileno,Email,NoofDays,Child,Adults,Message,Statusfield) values('" . $_REQUEST["pid"] ."','" . htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["r1"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t3"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t4"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t5"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t6"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t7"], ENT_QUOTES, 'UTF-8') ."','Pending')";
 				mysqli_query($cn, $s);
 
 				echo "<script>alert('Record Save');</script>";
