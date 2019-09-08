@@ -20,7 +20,11 @@
 			if(isset($_POST["sbmt"]))
 			{
 				$stmt = $cn->prepare("select * from users where Username = ? and Pwd = ?");
-				$stmt->bind_param('ss', htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8'), htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8'));
+
+				$t1 = htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8');
+				$t2 = htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8');
+
+				$stmt->bind_param('ss', $t1, $t2);
 
 				$stmt->execute();
 				$data = $stmt->get_result();

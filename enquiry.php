@@ -18,8 +18,32 @@
 		<?php
 			if(isset($_POST["sbmt"]))
 			{
-				$s="insert into enquiry(Packageid,Name,Gender,Mobileno,Email,NoofDays,Child,Adults,Message,Statusfield) values('" . $_REQUEST["pid"] ."','" . htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["r1"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t3"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t4"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t5"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t6"], ENT_QUOTES, 'UTF-8') ."','" . htmlspecialchars($_POST["t7"], ENT_QUOTES, 'UTF-8') ."','Pending')";
-				mysqli_query($cn, $s);
+				$stmt =
+					$cn->prepare("insert into enquiry(Packageid,Name,Gender,Mobileno,Email,NoofDays,Child,Adults,Message,Statusfield) values('"
+					. $_REQUEST["pid"] ."',"
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. " ? " . ","
+					. "'Pending')");
+
+				$t1 = htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8');
+				$r1 = htmlspecialchars($_POST["r1"], ENT_QUOTES, 'UTF-8');
+				$t2 = htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8');
+				$t3 = htmlspecialchars($_POST["t3"], ENT_QUOTES, 'UTF-8');
+				$t4 = htmlspecialchars($_POST["t4"], ENT_QUOTES, 'UTF-8');
+				$t5 = htmlspecialchars($_POST["t5"], ENT_QUOTES, 'UTF-8');
+				$t6 = htmlspecialchars($_POST["t6"], ENT_QUOTES, 'UTF-8');
+				$t7 = htmlspecialchars($_POST["t7"], ENT_QUOTES, 'UTF-8');
+
+				$stmt->bind_param('ssssddds',
+					$t1, $r1, $t2, $t3, $t4, $t5, $t6, $t7);
+
+				$stmt->execute();
 
 				echo "<script>alert('Record Save');</script>";
 			}
