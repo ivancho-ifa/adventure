@@ -19,24 +19,31 @@
 			$_SESSION['loginstatus']="";
 			if(isset($_POST["sbmt"]))
 			{
-				$stmt = $cn->prepare("select * from users where Username = ? and Pwd = ?");
+				$stmt = $cn->prepare("select * from users where Username = ?");
 
 				$t1 = htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8');
 				$t2 = htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8');
 
-				$stmt->bind_param('ss', $t1, $t2);
+				$stmt->bind_param('s', $t1);
 
 				$stmt->execute();
 				$data = $stmt->get_result();
 				$row = $data->fetch_assoc();
 
 				if($row) {
-					$_SESSION["Username"]= $_POST["t1"];
-					$_SESSION["usertype"]=$row[2];
-					$_SESSION['loginstatus']="yes";
-					header("location:index.php");
+					$pass = $row['Pwd'];
+
+					if (password_verify($t2, $pass)) {
+						$_SESSION["Username"]= $_POST["t1"];
+						$_SESSION["usertype"]=$row[2];
+						$_SESSION['loginstatus']="yes";
+						header("location:index.php");
+					} else {
+						echo "<script>alert('Invalid password');</script>";
+					}
+
 				} else {
-					echo "<script>alert('Invalid User Name or Password');</script>";
+					echo "<script>alert('Invalid User Name');</script>";
 				}
 			}
 		?>
