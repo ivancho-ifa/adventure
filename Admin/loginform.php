@@ -19,13 +19,15 @@
 			$_SESSION['loginstatus']="";
 			if(isset($_POST["sbmt"]))
 			{
-				$s="select * from users where Username='" . htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8') . "' and Pwd='" . htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8') ."'";
-
-				$q=mysqli_query($cn,$s);
-				$r=mysqli_num_rows($q);
-				$data=mysqli_fetch_array($q);
-
-				if($r>0) {
+				$stmt = $cn->prepare("select * from users where Username = ? and Pwd = ?");
+				$stmt->bind_param('s', htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8'));
+				$stmt->bind_param('s', htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8'));
+				
+				$stmt->execute();
+				$data = $stmt->get_result();
+				$row = $data->fetch_assoc();
+				
+				if($row) {
 					$_SESSION["Username"]= $_POST["t1"];
 					$_SESSION["usertype"]=$data[2];
 					$_SESSION['loginstatus']="yes";
