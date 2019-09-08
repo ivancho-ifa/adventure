@@ -19,7 +19,7 @@
 			$_SESSION['loginstatus']="";
 			if(isset($_POST["sbmt"]))
 			{
-				$s="select * from users where Username='" . $_POST["t1"] . "' and Pwd='" . $_POST["t2"] ."'";
+				$s="select * from users where Username='" . htmlspecialchars($_POST["t1"], ENT_QUOTES, 'UTF-8') . "' and Pwd='" . htmlspecialchars($_POST["t2"], ENT_QUOTES, 'UTF-8') ."'";
 
 				$q=mysqli_query($cn,$s);
 				$r=mysqli_num_rows($q);
